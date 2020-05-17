@@ -1,0 +1,46 @@
+<!-- 调用模板： -->
+<import src="news-template/news-item-template.wxml" />
+
+<view style="">
+  <view style="width：100%;line-height:80rpx;padding:0 15rpx;border:1px solid #ddd;">新闻标题：{{newsName}}</view>
+  <swiper class="swiper" autoplay="true" interval="2000" duration="1000" indicator-dots="true" circular="true">
+      <swiper-item>
+          <image src="/images/swiper/banner1.png"></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="/images/swiper/banner2.png"></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="/images/swiper/banner3.jpg"></image>
+      </swiper-item>
+  </swiper>
+
+  <!-- <swiper class="swiper" indicator-dots="true" autoplay="true" interval="2000" duration="1000" circular="true">  
+    <swiper-item wx:for="{{movies}}" wx:for-index="index">  
+     <image src="{{item.url}}">  </image>
+    </swiper-item>  
+  </swiper> -->
+
+  <view>
+    <!-- <image src="/images/swiper/banner1.png"></image> -->
+  </view>
+
+  <block wx:for="{{news_content}}" wx:for-item="newsList" wx:for-index="1" wx:key="1">
+    <!-- 下面一段可以用模板 template 模板 --> 
+    <!-- <view style="border-bottom:1px solid green;padding: 15rpx;">
+      <view>{{index}}</view>
+      <view style="font-weight:600;padding:10rpx 0;">城市：{{newsList.name}}</view>
+      <view>人口：{{newsList.people}}</view>
+      <view>时间：{{newsList.data}}</view>
+    </view> -->
+
+    <!-- 如果添加点击进入详情页面最好添加一个view包裹他 -->
+    <!-- data-自定义属性名 默认转为小写了 -->
+    <!-- 自定义的属性名在js里都可以通过event获取 -->
+    <view catchtap="gotoDetail" data-newsid="{{newsList.newsId}}">
+      <template is="newsItem" data="{{newsList}}" />
+    </view>
+  </block>
+  
+
+</view>

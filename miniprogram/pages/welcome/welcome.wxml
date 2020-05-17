@@ -1,0 +1,18 @@
+<!--miniprogram/pages/welcome/welcome.wxml-->
+<view class="container" >
+    <text style="margin-top:50rpx;">欢迎大家</text>
+    <navigator url="../news/news" open-type="navigate"  class="uploader-text go-nav">
+      <text class="go">开启小程序之旅</text>
+    </navigator>
+
+    <view>
+      <!-- <text bind:tap="goNews">开启小程序之旅(js跳转页面)</text> -->
+      <text catch:tap="goNews">开启小程序之旅(js跳转页面)</text>
+      <!-- bind：事件会向上冒泡 -->
+      <!-- catch：事件会组织冒泡 -->
+    </view>
+
+</view>
+
+
+

@@ -1,0 +1,18 @@
+/* miniprogram/pages/welcome/welcome.wxss */
+
+.go-nav{
+  text-align: center;
+  margin-top: 300rpx;
+  background-color: #b3d4db;
+
+}
+.go{
+   padding: 20rpx;
+    margin-top: 300rpx;
+    border: 1px solid green;
+    border-radius: 5px;
+  }
+page{
+  height: 100%;
+  background: #b3d4db;
+}

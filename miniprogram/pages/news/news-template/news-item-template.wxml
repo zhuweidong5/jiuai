@@ -1,0 +1,12 @@
+<!-- template 必须指定name 以方便在调用的时候：  <template is="这个name属性" data="绑定的数据" /> -->
+
+<!-- 在调用模板页面： <import src="模板路径" /> -->
+
+<template name="newsItem">
+    <view style="border-bottom:1px solid green;padding: 15rpx;">
+      <view>{{index}}</view>
+      <view>城市：{{newsList.name}}</view>
+      <view>人口：{{newsList.people}}</view>
+      <view>时间：{{newsList.data}}</view>
+    </view>
+</template>

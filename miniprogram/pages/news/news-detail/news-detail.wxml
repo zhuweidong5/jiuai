@@ -1,0 +1,15 @@
+<view>
+  我是详情页
+
+    <view>
+      <view>{{newsDetailData.name}}</view>
+    </view>
+
+    <view style="margin-top:100rpx;padding:15rpx;">
+      <text>收藏功能：人是收藏，手机是未收藏</text>
+      <view>
+        <image wx:if="{{colleced}}" catchtap="onCollection" src="/images/icon/我的团队.png" style="width:64rpx;height:64rpx;"></image>
+        <image wx:else catchtap="onCollection" src="/images/icon/手机号.png" style="width:64rpx;height:64rpx;"></image>
+      </view>
+    </view>
+</view>
